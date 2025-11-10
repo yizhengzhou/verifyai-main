@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "VerifyAI - 讓信任有依據",
+    "description": "3 秒辨識照片真偽，守護你的每一次網路互動"
+  },
+  "nav": {
+    "features": "功能特色",
+    "howItWorks": "使用方式",
+    "pricing": "方案定價",
+    "langSwitch": "語言",
+    "english": "English",
+    "chinese": "繁體中文"
+  },
+  "hero": {
+    "label": "AI 驅動驗證",
+    "title": "讓信任有依據",
+    "subtitle": "AI 為你社交加上一層防護",
+    "description": "3 秒辨識照片真偽，守護你的每一次網路互動",
+    "ctaButton": "立即開始驗證",
+    "ctaSecondary": "了解運作原理"
+  },
+  "howItWorks": {
+    "label": "簡單三步驟",
+    "title": "從疑惑到安心，只需三步",
+    "description": "完整的驗證流程，讓你輕鬆掌握照片真實性",
+    "step1": {
+      "number": "01",
+      "title": "上傳照片",
+      "description": "直接拖放或選擇你想驗證的照片"
+    },
+    "step2": {
+      "number": "02",
+      "title": "分享到 VerifyAI",
+      "description": "我們的 AI 引擎立即開始多層次分析"
+    },
+    "step3": {
+      "number": "03",
+      "title": "查看結果",
+      "description": "3 秒內取得完整分析與可信度評分"
+    }
+  },
+  "features": {
+    "label": "應用場景",
+    "title": "守護你的每一次社交",
+    "description": "從約會軟體到商業往來，VerifyAI 都能幫你把關",
+    "dating": {
+      "icon": "❤️",
+      "title": "約會軟體",
+      "description": "避免被假照片欺騙，讓每次配對都更安心"
+    },
+    "social": {
+      "icon": "👥",
+      "title": "社群媒體",
+      "description": "辨識假帳號與偽造內容，保護你的數位安全"
+    },
+    "business": {
+      "icon": "💼",
+      "title": "商業往來",
+      "description": "驗證合作對象身分，降低交易風險"
+    },
+    "ecommerce": {
+      "icon": "🛍️",
+      "title": "線上購物",
+      "description": "確認賣家真實性，避免詐騙與假貨"
+    }
+  },
+  "technology": {
+    "label": "強大技術",
+    "title": "核心引擎",
+    "description": "精準技術，確保最高準確度",
+    "reverseSearch": {
+      "title": "反向圖片搜索",
+      "description": "追蹤照片來源與使用歷史"
+    },
+    "aiDetection": {
+      "title": "AI 生成偵測",
+      "description": "識別 Deepfake 與 AI 合成照片"
+    },
+    "metadata": {
+      "title": "元數據分析",
+      "description": "檢查照片修改與來源資訊"
+    },
+    "faceMatch": {
+      "title": "人臉比對",
+      "description": "多角度驗證身分一致性"
+    }
+  },
+  "pricing": {
+    "label": "方案選擇",
+    "title": "選擇適合你的方案",
+    "description": "彈性定價，滿足不同需求",
+    "free": {
+      "name": "免費版",
+      "price": "NT$0",
+      "period": "永久免費",
+      "features": [
+        "每日 3 次驗證",
+        "基礎 AI 偵測",
+        "反向圖片搜索",
+        "基本分析報告"
+      ],
+      "cta": "開始使用"
+    },
+    "pro": {
+      "name": "專業版",
+      "price": "NT$299",
+      "period": "每月",
+      "badge": "最受歡迎",
+      "features": [
+        "無限次驗證",
+        "進階 AI 分析",
+        "完整元數據檢查",
+        "人臉比對功能",
+        "詳細分析報告",
+        "優先客服支援"
+      ],
+      "cta": "立即升級"
+    },
+    "enterprise": {
+      "name": "企業版",
+      "price": "客製報價",
+      "period": "年約方案",
+      "features": [
+        "包含專業版所有功能",
+        "API 整合",
+        "批量處理",
+        "專屬客戶經理",
+        "客製化需求",
+        "SLA 保證"
+      ],
+      "cta": "聯繫我們"
+    }
+  },
+  "cta": {
+    "title": "準備好讓信任有依據了嗎？",
+    "description": "立即開始使用 VerifyAI，守護你的每一次網路互動",
+    "button": "免費開始驗證",
+    "note": "無需信用卡，立即開始"
+  },
+  "footer": {
+    "brandTitle": "VerifyAI",
+    "brandDescription": "讓信任有依據，AI 為你的社交與商務互動提供可靠的身分驗證服務。",
+    "product": {
+      "title": "產品",
+      "features": "功能特色",
+      "pricing": "方案定價",
+      "api": "API 文件",
+      "mobile": "行動應用"
+    },
+    "company": {
+      "title": "公司",
+      "about": "關於我們",
+      "blog": "部落格",
+      "careers": "人才招募",
+      "contact": "聯絡我們"
+    },
+    "legal": {
+      "title": "法律",
+      "privacy": "隱私政策",
+      "terms": "服務條款",
+      "security": "資安政策"
+    },
+    "copyright": "© 2024 VerifyAI. 保留所有權利。"
+  }
+}

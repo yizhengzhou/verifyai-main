@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 秒辨識照片真偽，守護你的每一次網路互動">
+    <title>VerifyAI - 讓信任有依據</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --verify-green: #00E0A4;
+            --deep-teal: #0F8C83;
+            --coral-orange: #FF6E41;
+            --neutral-light: #F5F7F8;
+            --white: #FFFFFF;
+            --charcoal: #212427;
+            --text-gray: #6B7280;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            background: var(--white);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--verify-green);
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--neutral-light);
+            border-radius: 8px;
+        }
+
+        .lang-switcher a {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .lang-switcher a.active {
+            background: var(--verify-green);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero-container {
+            padding: 120px 5% 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-main {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--verify-green), var(--deep-teal));
+            border-radius: 24px;
+            color: white;
+        }
+
+        .card-label {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card-description {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--deep-teal);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Features Section */
+        .section {
+            padding: 80px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--neutral-light);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            color: var(--deep-teal);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--charcoal);
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            padding: 32px;
+            background: var(--neutral-light);
+            border-radius: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: white;
+            padding: 60px 5% 30px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--verify-green);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+
+    <!-- i18n Internationalization Script -->
+    <script src="./js/i18n.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo-text">
+                <span>Verify</span><span style="background: linear-gradient(135deg, var(--verify-green), var(--deep-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AI</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features" data-i18n="nav.features">功能特色</a></li>
+                <li><a href="#howItWorks" data-i18n="nav.howItWorks">使用方式</a></li>
+                <li><a href="#pricing" data-i18n="nav.pricing">方案定價</a></li>
+                <li class="lang-switcher">
+                    <a href="#" data-lang="zh-TW" data-i18n="nav.chinese">繁體中文</a>
+                    <span>/</span>
+                    <a href="#" data-lang="en" data-i18n="nav.english">English</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Container -->
+    <div class="hero-container">
+        <div class="hero-main">
+            <span class="card-label" data-i18n="hero.label">AI 驅動驗證</span>
+            <h1 class="card-title">
+                <span data-i18n="hero.title">讓信任有依據</span><br>
+                <span data-i18n="hero.subtitle">AI 為你社交加上一層防護</span>
+            </h1>
+            <p class="card-description" data-i18n="hero.description">3 秒辨識照片真偽，守護你的每一次網路互動</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary" data-i18n="hero.ctaButton">立即開始驗證</a>
+                <a href="#" class="btn btn-secondary" data-i18n="hero.ctaSecondary">了解運作原理</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="section-header">
+            <span class="section-label" data-i18n="features.label">應用場景</span>
+            <h2 class="section-title" data-i18n="features.title">守護你的每一次社交</h2>
+            <p class="section-description" data-i18n="features.description">從約會軟體到商業往來，VerifyAI 都能幫你把關</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">❤️</div>
+                <h3 class="feature-title" data-i18n="features.dating.title">約會軟體</h3>
+                <p class="feature-description" data-i18n="features.dating.description">避免被假照片欺騙，讓每次配對都更安心</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3 class="feature-title" data-i18n="features.social.title">社群媒體</h3>
+                <p class="feature-description" data-i18n="features.social.description">辨識假帳號與偽造內容，保護你的數位安全</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💼</div>
+                <h3 class="feature-title" data-i18n="features.business.title">商業往來</h3>
+                <p class="feature-description" data-i18n="features.business.description">驗證合作對象身分，降低交易風險</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛍️</div>
+                <h3 class="feature-title" data-i18n="features.ecommerce.title">線上購物</h3>
+                <p class="feature-description" data-i18n="features.ecommerce.description">確認賣家真實性，避免詐騙與假貨</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-i18n="footer.brandTitle">VerifyAI</h3>
+                <p data-i18n="footer.brandDescription">讓信任有依據，AI 為你的社交與商務互動提供可靠的身分驗證服務。</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.product.title">產品</h3>
+                <ul>
+                    <li><a href="#" data-i18n="footer.product.features">功能特色</a></li>
+                    <li><a href="#" data-i18n="footer.product.pricing">方案定價</a></li>
+                    <li><a href="#" data-i18n="footer.product.api">API 文件</a></li>
+                    <li><a href="#" data-i18n="footer.product.mobile">行動應用</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.company.title">公司</h3>
+                <ul>
+                    <li><a href="#" data-i18n="footer.company.about">關於我們</a></li>
+                    <li><a href="#" data-i18n="footer.company.blog">部落格</a></li>
+                    <li><a href="#" data-i18n="footer.company.careers">人才招募</a></li>
+                    <li><a href="#" data-i18n="footer.company.contact">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.legal.title">法律</h3>
+                <ul>
+                    <li><a href="#" data-i18n="footer.legal.privacy">隱私政策</a></li>
+                    <li><a href="#" data-i18n="footer.legal.terms">服務條款</a></li>
+                    <li><a href="#" data-i18n="footer.legal.security">資安政策</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2024 VerifyAI. 保留所有權利。</p>
+        </div>
+    </footer>
+</body>
+</html>

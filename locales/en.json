@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "VerifyAI - Trust with Evidence",
+    "description": "Identify photo authenticity in 3 seconds, protecting every online interaction"
+  },
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "langSwitch": "Language",
+    "english": "English",
+    "chinese": "繁體中文"
+  },
+  "hero": {
+    "label": "AI-Powered Verification",
+    "title": "Trust with Evidence",
+    "subtitle": "AI adds a layer of protection to your social interactions",
+    "description": "Identify photo authenticity in 3 seconds, protecting every online interaction",
+    "ctaButton": "Start Verification",
+    "ctaSecondary": "Learn How It Works"
+  },
+  "howItWorks": {
+    "label": "Simple 3-Step Process",
+    "title": "From Doubt to Confidence in Three Steps",
+    "description": "Complete verification process for easy photo authenticity assessment",
+    "step1": {
+      "number": "01",
+      "title": "Upload Photo",
+      "description": "Drag and drop or select the photo you want to verify"
+    },
+    "step2": {
+      "number": "02",
+      "title": "Share to VerifyAI",
+      "description": "Our AI engine begins multi-layer analysis immediately"
+    },
+    "step3": {
+      "number": "03",
+      "title": "View Results",
+      "description": "Get complete analysis and credibility score within 3 seconds"
+    }
+  },
+  "features": {
+    "label": "Use Cases",
+    "title": "Protecting Every Social Interaction",
+    "description": "From dating apps to business dealings, VerifyAI has you covered",
+    "dating": {
+      "icon": "❤️",
+      "title": "Dating Apps",
+      "description": "Avoid fake photos and make every match with confidence"
+    },
+    "social": {
+      "icon": "👥",
+      "title": "Social Media",
+      "description": "Identify fake accounts and forged content to protect your digital safety"
+    },
+    "business": {
+      "icon": "💼",
+      "title": "Business Dealings",
+      "description": "Verify partner identity and reduce transaction risks"
+    },
+    "ecommerce": {
+      "icon": "🛍️",
+      "title": "Online Shopping",
+      "description": "Confirm seller authenticity and avoid scams and counterfeits"
+    }
+  },
+  "technology": {
+    "label": "Powerful Technology",
+    "title": "Core Engine",
+    "description": "Precise technology ensuring highest accuracy",
+    "reverseSearch": {
+      "title": "Reverse Image Search",
+      "description": "Track photo origin and usage history"
+    },
+    "aiDetection": {
+      "title": "AI Generation Detection",
+      "description": "Identify Deepfake and AI-synthesized photos"
+    },
+    "metadata": {
+      "title": "Metadata Analysis",
+      "description": "Check photo modifications and source information"
+    },
+    "faceMatch": {
+      "title": "Face Matching",
+      "description": "Multi-angle identity consistency verification"
+    }
+  },
+  "pricing": {
+    "label": "Choose Your Plan",
+    "title": "Select the Plan That Fits You",
+    "description": "Flexible pricing to meet different needs",
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "period": "Forever Free",
+      "features": [
+        "3 verifications per day",
+        "Basic AI detection",
+        "Reverse image search",
+        "Basic analysis report"
+      ],
+      "cta": "Get Started"
+    },
+    "pro": {
+      "name": "Professional",
+      "price": "$10",
+      "period": "per month",
+      "badge": "Most Popular",
+      "features": [
+        "Unlimited verifications",
+        "Advanced AI analysis",
+        "Complete metadata check",
+        "Face matching feature",
+        "Detailed analysis report",
+        "Priority customer support"
+      ],
+      "cta": "Upgrade Now"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom Quote",
+      "period": "Annual Contract",
+      "features": [
+        "All Pro features included",
+        "API integration",
+        "Batch processing",
+        "Dedicated account manager",
+        "Custom requirements",
+        "SLA guarantee"
+      ],
+      "cta": "Contact Us"
+    }
+  },
+  "cta": {
+    "title": "Ready to Trust with Evidence?",
+    "description": "Start using VerifyAI now to protect every online interaction",
+    "button": "Start Free Verification",
+    "note": "No credit card required, start instantly"
+  },
+  "footer": {
+    "brandTitle": "VerifyAI",
+    "brandDescription": "Trust with evidence - AI provides reliable identity verification for your social and business interactions.",
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "api": "API Documentation",
+      "mobile": "Mobile App"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contact Us"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "security": "Security Policy"
+    },
+    "copyright": "© 2024 VerifyAI. All rights reserved."
+  }
+}
