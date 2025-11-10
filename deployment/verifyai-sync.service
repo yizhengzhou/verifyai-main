@@ -1,0 +1,43 @@
+# VerifyAI Git Sync Systemd Service
+# Location: /etc/systemd/system/verifyai-sync.service
+#
+# 此服務會自動從 GitHub 拉取最新版本
+# 由 verifyai-sync.timer 定期觸發
+
+[Unit]
+Description=VerifyAI Git Sync Service
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+
+# 工作目錄
+WorkingDirectory=/var/www/verifyai
+
+# 環境變數
+Environment="GIT_SSH_COMMAND=ssh -o StrictHostKeyChecking=no"
+
+# 執行同步腳本
+ExecStart=/var/www/verifyai/deployment/sync.sh
+
+# 日誌設定
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=verifyai-sync
+
+# 失敗處理
+Restart=on-failure
+RestartSec=30s
+
+# 安全設定
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/verifyai
+
+[Install]
+WantedBy=multi-user.target
