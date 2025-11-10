@@ -9,7 +9,9 @@
     "pricing": "Pricing",
     "langSwitch": "Language",
     "english": "English",
-    "chinese": "繁體中文"
+    "chinese": "繁體中文",
+    "japanese": "日本語",
+    "korean": "한국어"
   },
   "hero": {
     "label": "AI-Powered Verification",

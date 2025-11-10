@@ -7,7 +7,7 @@ class I18n {
     constructor() {
         this.currentLang = 'zh-TW'; // Default language
         this.translations = {};
-        this.supportedLanguages = ['zh-TW', 'en'];
+        this.supportedLanguages = ['zh-TW', 'en', 'ja', 'ko'];
     }
 
     /**
@@ -23,6 +23,10 @@ class I18n {
             const browserLang = navigator.language || navigator.userLanguage;
             if (browserLang.startsWith('zh')) {
                 this.currentLang = 'zh-TW';
+            } else if (browserLang.startsWith('ja')) {
+                this.currentLang = 'ja';
+            } else if (browserLang.startsWith('ko')) {
+                this.currentLang = 'ko';
             } else {
                 this.currentLang = 'en';
             }
