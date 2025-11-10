@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "title": "VerifyAI - 信頼に根拠を",
+    "description": "3秒で写真の真偽を識別し、すべてのオンライン交流を守ります"
+  },
+  "nav": {
+    "features": "機能特色",
+    "howItWorks": "使用方式",
+    "pricing": "料金プラン",
+    "langSwitch": "言語",
+    "english": "English",
+    "chinese": "繁體中文",
+    "japanese": "日本語",
+    "korean": "한국어"
+  },
+  "hero": {
+    "label": "AI駆動検証",
+    "title": "信頼に根拠を",
+    "subtitle": "AIがあなたのSNSに防護層を追加",
+    "description": "3秒で写真の真偽を識別し、すべてのオンライン交流を守ります",
+    "ctaButton": "今すぐ検証を開始",
+    "ctaSecondary": "仕組みを理解する"
+  },
+  "howItWorks": {
+    "label": "簡単な3ステップ",
+    "title": "疑問から安心へ、たった3ステップ",
+    "description": "完全な検証プロセスで、写真の真実性を簡単に把握",
+    "step1": {
+      "number": "01",
+      "title": "写真をアップロード",
+      "description": "検証したい写真をドラッグ＆ドロップまたは選択"
+    },
+    "step2": {
+      "number": "02",
+      "title": "VerifyAIに共有",
+      "description": "AIエンジンが即座に多層分析を開始"
+    },
+    "step3": {
+      "number": "03",
+      "title": "結果を確認",
+      "description": "3秒以内に完全な分析と信頼性スコアを取得"
+    }
+  },
+  "features": {
+    "label": "適用シーン",
+    "title": "すべてのSNSを守る",
+    "description": "出会い系アプリからビジネス取引まで、VerifyAIがあなたを守ります",
+    "dating": {
+      "icon": "❤️",
+      "title": "出会い系アプリ",
+      "description": "偽の写真に騙されることなく、すべてのマッチングに安心を"
+    },
+    "social": {
+      "icon": "👥",
+      "title": "SNS",
+      "description": "偽アカウントや偽造コンテンツを識別し、デジタルの安全を保護"
+    },
+    "business": {
+      "icon": "💼",
+      "title": "ビジネス取引",
+      "description": "パートナーの身元を確認し、取引リスクを軽減"
+    },
+    "ecommerce": {
+      "icon": "🛍️",
+      "title": "オンラインショッピング",
+      "description": "販売者の真実性を確認し、詐欺や偽物を回避"
+    }
+  },
+  "technology": {
+    "label": "強力な技術",
+    "title": "コアエンジン",
+    "description": "精密な技術で最高の精度を確保",
+    "reverseSearch": {
+      "title": "逆画像検索",
+      "description": "写真の元のソースと使用履歴を追跡"
+    },
+    "aiDetection": {
+      "title": "AI生成検出",
+      "description": "DeepfakeやAI合成写真を識別"
+    },
+    "metadata": {
+      "title": "メタデータ分析",
+      "description": "写真の変更とソース情報を確認"
+    },
+    "faceMatch": {
+      "title": "顔マッチング",
+      "description": "多角的な身元の一貫性検証"
+    }
+  },
+  "pricing": {
+    "label": "プランの選択",
+    "title": "あなたに合ったプランを選択",
+    "description": "柔軟な料金設定で、さまざまなニーズに対応",
+    "free": {
+      "name": "無料版",
+      "price": "¥0",
+      "period": "永久無料",
+      "features": [
+        "1日3回の検証",
+        "基本的なAI検出",
+        "逆画像検索",
+        "基本分析レポート"
+      ],
+      "cta": "開始する"
+    },
+    "pro": {
+      "name": "プロフェッショナル版",
+      "price": "¥1,200",
+      "period": "月額",
+      "badge": "最も人気",
+      "features": [
+        "無制限の検証",
+        "高度なAI分析",
+        "完全なメタデータチェック",
+        "顔マッチング機能",
+        "詳細な分析レポート",
+        "優先カスタマーサポート"
+      ],
+      "cta": "今すぐアップグレード"
+    },
+    "enterprise": {
+      "name": "エンタープライズ版",
+      "price": "カスタム見積もり",
+      "period": "年間契約",
+      "features": [
+        "プロ版のすべての機能を含む",
+        "API統合",
+        "バッチ処理",
+        "専任アカウントマネージャー",
+        "カスタム要件",
+        "SLA保証"
+      ],
+      "cta": "お問い合わせ"
+    }
+  },
+  "cta": {
+    "title": "信頼に根拠を持たせる準備はできましたか？",
+    "description": "今すぐVerifyAIを使い始めて、すべてのオンライン交流を守りましょう",
+    "button": "無料で検証を開始",
+    "note": "クレジットカード不要、すぐに開始"
+  },
+  "footer": {
+    "brandTitle": "VerifyAI",
+    "brandDescription": "信頼に根拠を - AIがあなたのSNSやビジネスの交流に信頼できる身元確認を提供します。",
+    "product": {
+      "title": "製品",
+      "features": "機能",
+      "pricing": "料金",
+      "api": "APIドキュメント",
+      "mobile": "モバイルアプリ"
+    },
+    "company": {
+      "title": "会社",
+      "about": "私たちについて",
+      "blog": "ブログ",
+      "careers": "採用情報",
+      "contact": "お問い合わせ"
+    },
+    "legal": {
+      "title": "法的事項",
+      "privacy": "プライバシーポリシー",
+      "terms": "利用規約",
+      "security": "セキュリティポリシー"
+    },
+    "copyright": "© 2024 VerifyAI. All rights reserved."
+  }
+}
