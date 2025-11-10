@@ -1,0 +1,24 @@
+# VerifyAI Git Sync Timer
+# Location: /etc/systemd/system/verifyai-sync.timer
+#
+# 定期觸發 verifyai-sync.service 來同步 GitHub repository
+
+[Unit]
+Description=VerifyAI Git Sync Timer
+Requires=verifyai-sync.service
+
+[Timer]
+# 啟動後 1 分鐘執行第一次
+OnBootSec=1min
+
+# 之後每 10 分鐘執行一次
+OnUnitActiveSec=10min
+
+# 如果錯過了執行時間，在下次啟動時補執行
+Persistent=true
+
+# 隨機延遲 0-60 秒，避免多個服務同時執行
+RandomizedDelaySec=60s
+
+[Install]
+WantedBy=timers.target

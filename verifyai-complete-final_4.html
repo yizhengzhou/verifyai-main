@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VerifyAI - 讓信任有依據</title>
+    <title data-i18n="page_title">VerifyAI - 讓信任有依據</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="translations.js"></script>
     <style>
         * {
             margin: 0;
@@ -713,14 +714,16 @@
             </a>
             <ul class="nav-links">
                 <li class="nav-lang">
-                    <a href="#" class="lang-option active" data-lang="zh">中文</a>
+                    <a href="#" class="lang-option active" data-lang="zh-TW" data-i18n="lang_zh">中文</a>
                     <span class="sep"> / </span>
-                    <a href="#" class="lang-option" data-lang="en">English</a>
+                    <a href="#" class="lang-option" data-lang="en" data-i18n="lang_en">English</a>
                     <span class="sep"> / </span>
-                    <a href="#" class="lang-option" data-lang="ja">日本語</a>
+                    <a href="#" class="lang-option" data-lang="ja" data-i18n="lang_ja">日本語</a>
+                    <span class="sep"> / </span>
+                    <a href="#" class="lang-option" data-lang="ko" data-i18n="lang_ko">한국어</a>
                   </li>
                   <li>
-                    <a href="#" class="nav-cta" id="start-btn">開始使用</a>
+                    <a href="#" class="nav-cta" id="start-btn" data-i18n="nav_start_btn">開始使用</a>
                   </li>
             </ul>
         </div>
@@ -738,12 +741,12 @@
                         <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <span class="card-label" style="background: rgba(255,255,255,0.2); color: white;">AI 驅動驗證</span>
-                <h1 class="card-title">讓信任有依據<br>AI 為你社交加上一層防護</h1>
-                <p class="card-description">3 秒辨識照片真偽，守護你的每一次網路互動</p>
+                <span class="card-label" style="background: rgba(255,255,255,0.2); color: white;" data-i18n="hero_label">AI 驅動驗證</span>
+                <h1 class="card-title"><span data-i18n="hero_title_line1">讓信任有依據</span><br><span data-i18n="hero_title_line2">AI 為你社交加上一層防護</span></h1>
+                <p class="card-description" data-i18n="hero_description">3 秒辨識照片真偽，守護你的每一次網路互動</p>
                 <a href="#" class="cta-button">
-                    <span>立即開始驗證</span>
-                    <span>→</span>
+                    <span data-i18n="hero_cta_text">立即開始驗證</span>
+                    <span data-i18n="hero_cta_arrow">→</span>
                 </a>
             </div>
 
@@ -811,9 +814,9 @@
 
             <!-- Usage Steps (Detailed) -->
             <div class="bento-card span-7 fade-in" style="animation-delay: 0.3s; background: var(--neutral-light);">
-                <span class="card-label">使用步驟</span>
-                <h2 class="card-title">從疑惑到安心，只需三步</h2>
-                <p class="card-description">完整的驗證流程，讓你輕鬆掌握照片真實性</p>
+                <span class="card-label" data-i18n="steps_label">使用步驟</span>
+                <h2 class="card-title" data-i18n="steps_title">從疑惑到安心，只需三步</h2>
+                <p class="card-description" data-i18n="steps_description">完整的驗證流程，讓你輕鬆掌握照片真實性</p>
                 
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem;">
                     <!-- Step 1 -->
@@ -825,9 +828,9 @@
                                 <text x="18" y="8.5" text-anchor="middle" fill="white" font-size="6" font-weight="bold">?</text>
                             </svg>
                         </div>
-                        <div style="font-size: 2.8rem; font-weight: 800; background: linear-gradient(135deg, var(--verify-green), var(--deep-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.8rem; font-family: 'Poppins', sans-serif;">01</div>
-                        <h4 style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem; color: var(--charcoal);">遇到疑似照片</h4>
-                        <p style="color: var(--text-gray); font-size: 0.95rem; line-height: 1.7;">在社交軟體或交友平台收到可疑照片</p>
+                        <div style="font-size: 2.8rem; font-weight: 800; background: linear-gradient(135deg, var(--verify-green), var(--deep-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.8rem; font-family: 'Poppins', sans-serif;" data-i18n="step_01_number">01</div>
+                        <h4 style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem; color: var(--charcoal);" data-i18n="step_01_title">遇到疑似照片</h4>
+                        <p style="color: var(--text-gray); font-size: 0.95rem; line-height: 1.7;" data-i18n="step_01_description">在社交軟體或交友平台收到可疑照片</p>
                     </div>
 
                     <!-- Step 2 -->
@@ -840,9 +843,9 @@
                                 <path d="M16 6L18 8L16 10L14 8L16 6Z" fill="#FF6E41"/>
                             </svg>
                         </div>
-                        <div style="font-size: 2.8rem; font-weight: 800; background: linear-gradient(135deg, var(--verify-green), var(--deep-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.8rem; font-family: 'Poppins', sans-serif;">02</div>
-                        <h4 style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem; color: var(--charcoal);">分享到 VerifyAI</h4>
-                        <p style="color: var(--text-gray); font-size: 0.95rem; line-height: 1.7;">長按照片選擇分享，或直接上傳到應用</p>
+                        <div style="font-size: 2.8rem; font-weight: 800; background: linear-gradient(135deg, var(--verify-green), var(--deep-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.8rem; font-family: 'Poppins', sans-serif;" data-i18n="step_02_number">02</div>
+                        <h4 style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem; color: var(--charcoal);" data-i18n="step_02_title">分享到 VerifyAI</h4>
+                        <p style="color: var(--text-gray); font-size: 0.95rem; line-height: 1.7;" data-i18n="step_02_description">長按照片選擇分享，或直接上傳到應用</p>
                     </div>
 
                     <!-- Step 3 -->
@@ -855,9 +858,9 @@
                                 <path d="M16 6L17.5 7.5L20 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <div style="font-size: 2.8rem; font-weight: 800; background: linear-gradient(135deg, var(--verify-green), var(--deep-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.8rem; font-family: 'Poppins', sans-serif;">03</div>
-                        <h4 style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem; color: var(--charcoal);">獲得驗證報告</h4>
-                        <p style="color: var(--text-gray); font-size: 0.95rem; line-height: 1.7;">3 秒內取得完整分析與可信度評分</p>
+                        <div style="font-size: 2.8rem; font-weight: 800; background: linear-gradient(135deg, var(--verify-green), var(--deep-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.8rem; font-family: 'Poppins', sans-serif;" data-i18n="step_03_number">03</div>
+                        <h4 style="font-weight: 700; margin-bottom: 1rem; font-size: 1.2rem; color: var(--charcoal);" data-i18n="step_03_title">獲得驗證報告</h4>
+                        <p style="color: var(--text-gray); font-size: 0.95rem; line-height: 1.7;" data-i18n="step_03_description">3 秒內取得完整分析與可信度評分</p>
                     </div>
                 </div>
             </div>
@@ -866,16 +869,16 @@
             <div class="bento-card span-12 fade-in" style="animation-delay: 0.5s;">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
                     <div>
-                        <span class="card-label">適用場景</span>
-                        <h2 class="card-title">守護你的每一次社交</h2>
-                        <p class="card-description">從約會軟體到商業往來，VerifyAI 都能幫你把關</p>
+                        <span class="card-label" data-i18n="scenarios_label">適用場景</span>
+                        <h2 class="card-title" data-i18n="scenarios_title">守護你的每一次社交</h2>
+                        <p class="card-description" data-i18n="scenarios_description">從約會軟體到商業往來，VerifyAI 都能幫你把關</p>
                         <div class="scenario-pills">
-                            <span class="pill">💑 約會軟體</span>
-                            <span class="pill">💬 社交平台</span>
-                            <span class="pill">🛍️ 二手交易</span>
-                            <span class="pill">👥 商業合作</span>
-                            <span class="pill">📧 網路交友</span>
-                            <span class="pill">🎯 身份驗證</span>
+                            <span class="pill" data-i18n="scenario_dating">💑 約會軟體</span>
+                            <span class="pill" data-i18n="scenario_social">💬 社交平台</span>
+                            <span class="pill" data-i18n="scenario_marketplace">🛍️ 二手交易</span>
+                            <span class="pill" data-i18n="scenario_business">👥 商業合作</span>
+                            <span class="pill" data-i18n="scenario_online_dating">📧 網路交友</span>
+                            <span class="pill" data-i18n="scenario_identity">🎯 身份驗證</span>
                         </div>
                     </div>
                     <div style="display: flex; align-items: center; justify-content: center;">
@@ -911,9 +914,9 @@
 
             <!-- Detection Methods -->
             <div class="bento-card span-5 fade-in" style="animation-delay: 0.6s;">
-                <span class="card-label">檢測技術</span>
-                <h2 class="card-title">核心引擎</h2>
-                <p class="card-description">精準技術，確保最高準確度</p>
+                <span class="card-label" data-i18n="tech_label">檢測技術</span>
+                <h2 class="card-title" data-i18n="tech_title">核心引擎</h2>
+                <p class="card-description" data-i18n="tech_description">精準技術，確保最高準確度</p>
                 
                 <!-- 主要技術 - 放大顯示 -->
                 <div style="background: linear-gradient(135deg, rgba(0, 224, 164, 0.1), rgba(15, 140, 131, 0.1)); padding: 2rem; border-radius: 16px; margin: 2rem 0; border: 2px solid var(--verify-green);">
@@ -922,8 +925,8 @@
                             🔍
                         </div>
                         <div>
-                            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">反向圖片搜索</h3>
-                            <p style="color: var(--text-gray); font-size: 1rem; line-height: 1.6; margin: 0;">全網比對數十億張圖片，快速找出原始來源與重複使用記錄</p>
+                            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;" data-i18n="tech_main_title">反向圖片搜索</h3>
+                            <p style="color: var(--text-gray); font-size: 1rem; line-height: 1.6; margin: 0;" data-i18n="tech_main_description">全網比對數十億張圖片，快速找出原始來源與重複使用記錄</p>
                         </div>
                     </div>
                 </div>
@@ -932,8 +935,8 @@
                 <div class="trust-badges" style="margin-top: 1rem;">
                     <div class="badge-icon" style="width: 50px; height: 50px; font-size: 1.5rem;">📊</div>
                     <div class="badge-content">
-                        <h4>元數據分析</h4>
-                        <p>檢查照片拍攝資訊與編輯記錄</p>
+                        <h4 data-i18n="tech_metadata_title">元數據分析</h4>
+                        <p data-i18n="tech_metadata_description">檢查照片拍攝資訊與編輯記錄</p>
                     </div>
                 </div>
             </div>
@@ -944,9 +947,9 @@
                 <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; border: 2px solid rgba(255, 255, 255, 0.1); border-radius: 50%; pointer-events: none;"></div>
                 <div style="position: absolute; bottom: -80px; left: -80px; width: 250px; height: 250px; border: 2px solid rgba(255, 255, 255, 0.08); border-radius: 50%; pointer-events: none;"></div>
                 <div style="position: relative; z-index: 1;">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white; font-family: 'Poppins', sans-serif;">準備好讓信任有依據了嗎？</h2>
-                    <p style="font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.95; color: white;">免費試用，立即體驗 AI 驅動的照片驗證</p>
-                    <a href="#" class="cta-button">開始使用 VerifyAI →</a>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white; font-family: 'Poppins', sans-serif;" data-i18n="final_cta_title">準備好讓信任有依據了嗎？</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.95; color: white;" data-i18n="final_cta_description">免費試用，立即體驗 AI 驅動的照片驗證</p>
+                    <a href="#" class="cta-button" data-i18n="final_cta_button">開始使用 VerifyAI →</a>
                 </div>
             </div>
         </div>
@@ -956,38 +959,38 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>VerifyAI</h3>
-                <p style="color: rgba(255,255,255,0.7); line-height: 1.8;">用 AI 守護網路信任<br>讓每次社交都安心</p>
+                <h3 data-i18n="footer_brand_title">VerifyAI</h3>
+                <p style="color: rgba(255,255,255,0.7); line-height: 1.8;"><span data-i18n="footer_brand_tagline_line1">用 AI 守護網路信任</span><br><span data-i18n="footer_brand_tagline_line2">讓每次社交都安心</span></p>
             </div>
             <div class="footer-section">
-                <h3>產品</h3>
+                <h3 data-i18n="footer_product_title">產品</h3>
                 <ul class="footer-links">
-                    <li><a href="#">功能介紹</a></li>
-                    <li><a href="#">價格方案</a></li>
-                    <li><a href="#">API 文件</a></li>
-                    <li><a href="#">使用案例</a></li>
+                    <li><a href="#" data-i18n="footer_product_features">功能介紹</a></li>
+                    <li><a href="#" data-i18n="footer_product_pricing">價格方案</a></li>
+                    <li><a href="#" data-i18n="footer_product_api">API 文件</a></li>
+                    <li><a href="#" data-i18n="footer_product_cases">使用案例</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>公司</h3>
+                <h3 data-i18n="footer_company_title">公司</h3>
                 <ul class="footer-links">
-                    <li><a href="#">關於我們</a></li>
-                    <li><a href="#">部落格</a></li>
-                    <li><a href="#">媒體報導</a></li>
-                    <li><a href="#">聯絡我們</a></li>
+                    <li><a href="#" data-i18n="footer_company_about">關於我們</a></li>
+                    <li><a href="#" data-i18n="footer_company_blog">部落格</a></li>
+                    <li><a href="#" data-i18n="footer_company_media">媒體報導</a></li>
+                    <li><a href="#" data-i18n="footer_company_contact">聯絡我們</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>法律</h3>
+                <h3 data-i18n="footer_legal_title">法律</h3>
                 <ul class="footer-links">
-                    <li><a href="#">隱私政策</a></li>
-                    <li><a href="#">服務條款</a></li>
-                    <li><a href="#">Cookie 政策</a></li>
+                    <li><a href="#" data-i18n="footer_legal_privacy">隱私政策</a></li>
+                    <li><a href="#" data-i18n="footer_legal_terms">服務條款</a></li>
+                    <li><a href="#" data-i18n="footer_legal_cookies">Cookie 政策</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 VerifyAI. All rights reserved.</p>
+            <p data-i18n="footer_copyright">© 2025 VerifyAI. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1048,6 +1051,72 @@
 
         // Auto-play carousel every 3 seconds
         setInterval(nextSlide, 3000);
+
+        // ============================================
+        // i18n Language Switching Functionality
+        // ============================================
+
+        // Get current language from localStorage or default to zh-TW
+        let currentLanguage = localStorage.getItem('preferredLanguage') || 'zh-TW';
+
+        /**
+         * Switch language and update all elements with data-i18n attribute
+         * @param {string} lang - Language code (zh-TW, en, ja, ko)
+         */
+        function switchLanguage(lang) {
+            if (!translations[lang]) {
+                console.error(`Language ${lang} not found in translations`);
+                return;
+            }
+
+            currentLanguage = lang;
+
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const translation = translations[lang][key];
+
+                if (translation) {
+                    // Handle title tag specially
+                    if (el.tagName === 'TITLE') {
+                        document.title = translation;
+                    } else {
+                        el.textContent = translation;
+                    }
+                } else {
+                    console.warn(`Translation key "${key}" not found for language "${lang}"`);
+                }
+            });
+
+            // Update html lang attribute
+            document.documentElement.lang = lang;
+
+            // Save preference to localStorage
+            localStorage.setItem('preferredLanguage', lang);
+
+            // Update active state on language selector
+            document.querySelectorAll('.lang-option').forEach(option => {
+                option.classList.remove('active');
+                if (option.getAttribute('data-lang') === lang) {
+                    option.classList.add('active');
+                }
+            });
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Apply saved language or default
+            switchLanguage(currentLanguage);
+
+            // Add click event listeners to language options
+            document.querySelectorAll('.lang-option').forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const lang = this.getAttribute('data-lang');
+                    switchLanguage(lang);
+                });
+            });
+        });
 
     </script>
 </body>

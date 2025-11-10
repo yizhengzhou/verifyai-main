@@ -1,0 +1,40 @@
+# ============================================
+# VerifyAI .gitignore
+# ============================================
+
+# 備份檔案
+backup/
+*.backup
+*.bak
+
+# 日誌檔案
+*.log
+logs/
+
+# OS 檔案
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 編輯器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 臨時檔案
+tmp/
+temp/
+*.tmp
+
+# 本地配置 (包含敏感資訊)
+deployment/cloudflared-config.yml.local
+deployment/.env
+
+# Node modules (如果未來使用)
+node_modules/
+package-lock.json
+
+# 部署相關的本地檔案
+deployment/*.local
