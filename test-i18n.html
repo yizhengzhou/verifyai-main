@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i18n Test Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .lang-switcher {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .lang-btn {
+            padding: 12px 24px;
+            border: 2px solid #00E0A4;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .lang-btn.active {
+            background: #00E0A4;
+            color: white;
+        }
+        .lang-btn:hover {
+            transform: translateY(-2px);
+        }
+        .test-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #00E0A4;
+        }
+        .test-label {
+            font-weight: bold;
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .test-value {
+            font-size: 1.1em;
+            color: #333;
+        }
+        .status {
+            padding: 20px;
+            background: #e8f5e9;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .error {
+            background: #ffebee;
+            color: #c62828;
+        }
+        .success {
+            color: #2e7d32;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-section">
+        <h1>🧪 i18n System Test</h1>
+
+        <div id="status" class="status">
+            <strong>載入中...</strong>
+        </div>
+
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="zh-TW">繁體中文</button>
+            <button class="lang-btn" data-lang="en">English</button>
+        </div>
+
+        <h2>測試翻譯內容</h2>
+
+        <div class="test-item">
+            <div class="test-label">meta.title</div>
+            <div class="test-value" data-i18n="meta.title">載入中...</div>
+        </div>
+
+        <div class="test-item">
+            <div class="test-label">hero.title</div>
+            <div class="test-value" data-i18n="hero.title">載入中...</div>
+        </div>
+
+        <div class="test-item">
+            <div class="test-label">hero.description</div>
+            <div class="test-value" data-i18n="hero.description">載入中...</div>
+        </div>
+
+        <div class="test-item">
+            <div class="test-label">nav.features</div>
+            <div class="test-value" data-i18n="nav.features">載入中...</div>
+        </div>
+
+        <div class="test-item">
+            <div class="test-label">features.dating.title</div>
+            <div class="test-value" data-i18n="features.dating.title">載入中...</div>
+        </div>
+
+        <div class="test-item">
+            <div class="test-label">footer.copyright</div>
+            <div class="test-value" data-i18n="footer.copyright">載入中...</div>
+        </div>
+
+        <h2>系統資訊</h2>
+        <div class="test-item">
+            <div class="test-label">當前語言</div>
+            <div class="test-value" id="currentLang">檢查中...</div>
+        </div>
+
+        <div class="test-item">
+            <div class="test-label">支援的語言</div>
+            <div class="test-value" id="supportedLangs">檢查中...</div>
+        </div>
+
+        <div class="test-item">
+            <div class="test-label">瀏覽器語言</div>
+            <div class="test-value" id="browserLang">檢查中...</div>
+        </div>
+    </div>
+
+    <script src="./js/i18n.js"></script>
+    <script>
+        // Wait for i18n to initialize
+        setTimeout(() => {
+            const status = document.getElementById('status');
+
+            try {
+                // Check if i18n is loaded
+                if (typeof i18n === 'undefined') {
+                    status.innerHTML = '<strong class="error">❌ 錯誤：i18n.js 未載入！</strong><br>請確認 js/i18n.js 檔案存在。';
+                    return;
+                }
+
+                // Get current language
+                const currentLang = i18n.getCurrentLanguage();
+                document.getElementById('currentLang').textContent = currentLang;
+
+                // Get supported languages
+                const supportedLangs = i18n.getSupportedLanguages();
+                document.getElementById('supportedLangs').textContent = supportedLangs.join(', ');
+
+                // Get browser language
+                document.getElementById('browserLang').textContent = navigator.language || navigator.userLanguage;
+
+                // Test translation
+                const testKey = 'meta.title';
+                const translation = i18n.t(testKey);
+
+                if (translation && translation !== testKey) {
+                    status.innerHTML = '<strong class="success">✅ i18n 系統運作正常！</strong><br>語言檔案已成功載入，翻譯功能正常。';
+                } else {
+                    status.innerHTML = '<strong class="error">⚠️ 警告：翻譯功能可能有問題</strong><br>請檢查 locales/ 目錄下的語言檔案。';
+                }
+
+                // Setup language buttons
+                const langButtons = document.querySelectorAll('.lang-btn');
+                langButtons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const lang = btn.getAttribute('data-lang');
+                        i18n.changeLanguage(lang);
+
+                        langButtons.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+
+                        // Update system info
+                        document.getElementById('currentLang').textContent = lang;
+                    });
+                });
+
+                console.log('✅ i18n test page loaded successfully');
+                console.log('Current language:', currentLang);
+                console.log('Test translation:', i18n.t('hero.title'));
+
+            } catch (error) {
+                status.innerHTML = `<strong class="error">❌ 錯誤：${error.message}</strong>`;
+                console.error('i18n test error:', error);
+            }
+        }, 500);
+    </script>
+</body>
+</html>
