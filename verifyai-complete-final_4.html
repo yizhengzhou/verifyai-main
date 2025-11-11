@@ -701,6 +701,8 @@
 
     <!-- i18n Internationalization Script -->
     <script src="./js/i18n.js"></script>
+    <!-- Smooth Scroll Script -->
+    <script src="./js/smooth-scroll.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -1014,21 +1016,6 @@
             observer.observe(el);
         });
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                // Only handle valid anchor links (not just '#')
-                if (href && href.length > 1) {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                }
-            });
-        });
-    
         // Carousel functionality
         let currentSlide = 0;
         const slides = document.querySelectorAll('.screenshot-card');
