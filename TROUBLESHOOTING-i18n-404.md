@@ -7,6 +7,31 @@
 i18n.js:1  Failed to load resource: the server responded with a status of 404 ()
 ```
 
+## 🚀 快速修復（推薦）
+
+如果端口被佔用，使用更新的測試腳本：
+
+```bash
+cd /home/yizheng/verifyai-site
+
+# 自動尋找可用端口（推薦）
+./test-local.sh
+
+# 或手動指定端口
+./test-local.sh 8080
+
+# 其他常用端口
+./test-local.sh 3000
+./test-local.sh 5000
+./test-local.sh 9000
+```
+
+腳本會：
+- ✅ 檢查所有 i18n 文件是否存在
+- ✅ 自動偵測並使用可用端口
+- ✅ 顯示樹莓派的 IP 地址（方便從其他設備訪問）
+- ✅ 如果端口被佔用，提供警告和解決方案
+
 ## 診斷步驟
 
 ### 1. 確認文件存在
@@ -71,8 +96,21 @@ git push
 # 進入您的 repo 目錄
 cd /home/yizheng/verifyai-site
 
+# 🌟 推薦: 使用測試腳本（自動選擇可用端口）
+./test-local.sh
+
+# 或手動指定端口
+./test-local.sh 8080
+
+# 手動啟動服務器的方法：
+
 # 方法 1: 使用 Python (推薦)
 python3 -m http.server 8000
+
+# 如果端口 8000 被佔用，使用其他端口
+python3 -m http.server 8080
+python3 -m http.server 3000
+python3 -m http.server 5000
 
 # 方法 2: 使用 Python 2
 python -m SimpleHTTPServer 8000
@@ -84,7 +122,10 @@ npx http-server -p 8000
 php -S localhost:8000
 ```
 
-然後在瀏覽器訪問：`http://localhost:8000/index.html`
+然後在瀏覽器訪問（將端口號改為您使用的端口）：
+- `http://localhost:8000/index.html`
+- `http://localhost:8080/index.html`
+- 或使用樹莓派的 IP：`http://[樹莓派IP]:8080/index.html`
 
 ### 問題 B: 從子目錄打開 HTML
 
@@ -132,7 +173,76 @@ git push origin main
 - `js/smooth-scroll.js`
 - `locales/*.json`
 
-### 問題 D: 瀏覽器緩存
+### 問題 D: 端口被佔用（Port Already in Use）
+
+**症狀**：
+- 服務器顯示 "Serving HTTP on 0.0.0.0 port 8000..."，但瀏覽器無法連接
+- 或出現 "Address already in use" 錯誤
+
+**原因**：端口已被其他服務（如另一個 web 服務器、開發工具等）佔用
+
+**解決方案**：
+
+#### 方案 1: 使用測試腳本自動選擇端口（推薦）
+
+```bash
+cd /home/yizheng/verifyai-site
+./test-local.sh  # 自動找可用端口
+```
+
+#### 方案 2: 手動指定其他端口
+
+```bash
+# 嘗試不同的端口
+./test-local.sh 8080
+./test-local.sh 3000
+./test-local.sh 5000
+./test-local.sh 9000
+
+# 或手動使用 Python
+python3 -m http.server 8080
+```
+
+#### 方案 3: 查看並停止佔用端口的進程
+
+```bash
+# 查看哪個進程佔用了端口 8000
+sudo lsof -i :8000
+# 或
+sudo netstat -tuln | grep 8000
+
+# 如果需要停止該進程（謹慎使用）
+sudo kill -9 [PID]
+```
+
+#### 方案 4: 檢查常見的端口佔用原因
+
+在樹莓派上，以下服務可能佔用常用端口：
+- **端口 8000**: 可能被其他 Python HTTP 服務器佔用
+- **端口 80**: 通常被 Nginx 或 Apache 佔用
+- **端口 3000**: 可能被 Node.js 開發服務器佔用
+- **端口 8080**: 可能被 Tomcat 或其他 Java 應用佔用
+
+**在樹莓派環境的特殊說明**：
+
+如果您想從其他設備訪問（如手機、電腦），需要：
+
+1. 確認樹莓派的 IP 地址：
+```bash
+hostname -I
+```
+
+2. 確保防火牆允許該端口（如果有啟用）：
+```bash
+sudo ufw allow 8080/tcp
+```
+
+3. 在其他設備的瀏覽器訪問：
+```
+http://[樹莓派IP]:8080/index.html
+```
+
+### 問題 E: 瀏覽器緩存
 
 **症狀**：修復後仍然看到 404 錯誤
 
@@ -142,7 +252,7 @@ git push origin main
 - Firefox: `Ctrl + Shift + Delete` 或 `Cmd + Shift + Delete`
 - 或使用無痕/隱私模式測試
 
-### 問題 E: CORS 錯誤
+### 問題 F: CORS 錯誤
 
 **症狀**：Console 顯示 CORS 相關錯誤
 
