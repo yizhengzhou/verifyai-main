@@ -1019,11 +1019,16 @@
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
                 // Only handle valid anchor links (not just '#')
-                if (href && href.length > 1) {
+                if (href && href.length > 1 && href !== '#') {
                     e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    try {
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    } catch (error) {
+                        // Invalid selector - silently fail or log for debugging
+                        console.warn('Invalid selector:', href, error);
                     }
                 }
             });

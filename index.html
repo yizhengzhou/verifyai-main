@@ -397,5 +397,29 @@
             <p data-i18n="footer.copyright">© 2024 VerifyAI. 保留所有權利。</p>
         </div>
     </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    // Only handle valid anchor links (not just '#')
+                    if (href && href.length > 1 && href !== '#') {
+                        e.preventDefault();
+                        try {
+                            const target = document.querySelector(href);
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        } catch (error) {
+                            // Invalid selector - silently fail or log for debugging
+                            console.warn('Invalid selector:', href, error);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
