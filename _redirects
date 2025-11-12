@@ -1,0 +1,9 @@
+# Cloudflare Pages Redirects Configuration
+# https://developers.cloudflare.com/pages/platform/redirects/
+
+# Redirect old HTML file to main page (if needed)
+/verifyai-complete-final_4.html /index.html 301
+
+# SPA fallback - if a route doesn't exist, serve index.html
+# This allows for future SPA routing if needed
+/* /index.html 200
